@@ -9,7 +9,7 @@ app.get('/', function(request, response) {
     if (exists) {
       var indexContent = fs.readFileSync('index.html');
       if (Buffer.isBuffer(indexContent)) {
-        msg = Buffer.toString(indexContent);  
+        msg = indexContent.toString();  
       } else {
         msg = indexContent;
       }
